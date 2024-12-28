@@ -18,7 +18,7 @@ namespace WindowsFormsApp1_2024_12_27
         private Dictionary<string, Dialogue> dialogues;
         private Dictionary<string, OptionData> options;
 
-       
+        public string MainCharactor = "";
         public Form1()
         {
             InitializeComponent();
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1_2024_12_27
                 var character = dialogue.Character;
                 var dialogueText = dialogue.Text;
 
-                Speaker.Text = character; // 顯示角色名稱
+                Speaker.Text = (character=="主角")? MainCharactor : character; // 顯示角色名稱
                 DialogueLabel.Text = "";
                 
                 foreach (char c in dialogueText)
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1_2024_12_27
                 return;
             }
 
-            Speaker.Text = textBox1.Text;
+            MainCharactor = textBox1.Text; 
             Speaker.Visible = true;
             label1.Visible = false;
             textBox1.Visible = false;
