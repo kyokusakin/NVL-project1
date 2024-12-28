@@ -162,6 +162,10 @@ namespace WindowsFormsApp1_2024_12_27
                 MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            if (isChoosingOption)
+            {
+                return;
+            }
             var item = CurrentSequence.Dequeue();
             if (item.Type == "dialogue")
             {
@@ -203,16 +207,9 @@ namespace WindowsFormsApp1_2024_12_27
             }
         }
 
-        private void DialogueLabel_Click(object sender, EventArgs e)
-        {
-            if(!isChoosingOption)
-                ProcessNextSequenceItem();
-        }
+        private void DialogueLabel_Click(object sender, EventArgs e) => ProcessNextSequenceItem();
 
-        private void nextbutton_Click(object sender, EventArgs e)
-        {
-            ProcessNextSequenceItem();
-        }
+        private void nextbutton_Click(object sender, EventArgs e) => ProcessNextSequenceItem();
 
         private void Character_Click(object sender, EventArgs e)
         {
