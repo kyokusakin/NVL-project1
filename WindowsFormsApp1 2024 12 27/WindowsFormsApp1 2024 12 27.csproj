@@ -87,10 +87,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\leave2_sequnce.json" />
+    <None Include="Resources\leave1_sequnce.json" />
+    <None Include="Resources\leave3_sequnce.json" />
     <None Include="Resources\options.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\sequence.json">
+    <None Include="Resources\pickup1_sequnce.json" />
+    <None Include="Resources\pickup2_sequnce.json" />
+    <None Include="Resources\pickup3_sequnce.json" />
+    <None Include="Resources\start_sequence.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
