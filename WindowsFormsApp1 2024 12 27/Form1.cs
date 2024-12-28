@@ -160,14 +160,10 @@ namespace WindowsFormsApp1_2024_12_27
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             Button btn = (Button)sender;
             string nextDialogueId = btn.Tag.ToString();
-            ProcessNextDialogue(nextDialogueId);
+            isChoosingOption = false;
             nextbutton.Enabled = true;
             DisplayChoices(false);
-        }
-
-        private void ProcessNextDialogue(string dialogueId)
-        {
-            ShowDialogue(dialogueId);
+            ShowDialogue(nextDialogueId);
         }
 
         private void Speaker_Click(object sender, EventArgs e)
