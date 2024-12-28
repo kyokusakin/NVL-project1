@@ -60,7 +60,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(173, 148);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 22);
             this.textBox1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(268, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 31);
             this.button1.TabIndex = 3;
@@ -78,8 +78,8 @@
             // 
             // choice1
             // 
-            this.choice1.Location = new System.Drawing.Point(211, 15);
-            this.choice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.choice1.Location = new System.Drawing.Point(211, 52);
+            this.choice1.Margin = new System.Windows.Forms.Padding(2);
             this.choice1.Name = "choice1";
             this.choice1.Size = new System.Drawing.Size(95, 31);
             this.choice1.TabIndex = 4;
@@ -90,8 +90,8 @@
             // 
             // choice2
             // 
-            this.choice2.Location = new System.Drawing.Point(211, 61);
-            this.choice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.choice2.Location = new System.Drawing.Point(211, 98);
+            this.choice2.Margin = new System.Windows.Forms.Padding(2);
             this.choice2.Name = "choice2";
             this.choice2.Size = new System.Drawing.Size(95, 31);
             this.choice2.TabIndex = 5;
@@ -126,7 +126,7 @@
             // 
             this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
             this.Character.Location = new System.Drawing.Point(422, 95);
-            this.Character.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Character.Margin = new System.Windows.Forms.Padding(2);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(113, 119);
             this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +139,7 @@
             // 
             this.Scene.Image = global::WindowsFormsApp1_2024_12_27.Properties.Resources.螢幕擷取畫面_2023_07_28_223624;
             this.Scene.Location = new System.Drawing.Point(-1, 0);
-            this.Scene.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Scene.Margin = new System.Windows.Forms.Padding(2);
             this.Scene.Name = "Scene";
             this.Scene.Size = new System.Drawing.Size(536, 309);
             this.Scene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +150,7 @@
             // 
             this.dialoguePanel.Controls.Add(this.nextbutton);
             this.dialoguePanel.Location = new System.Drawing.Point(-1, 211);
-            this.dialoguePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dialoguePanel.Margin = new System.Windows.Forms.Padding(2);
             this.dialoguePanel.Name = "dialoguePanel";
             this.dialoguePanel.Size = new System.Drawing.Size(536, 87);
             this.dialoguePanel.TabIndex = 10;
@@ -158,7 +158,7 @@
             // nextbutton
             // 
             this.nextbutton.Location = new System.Drawing.Point(500, 57);
-            this.nextbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(2);
             this.nextbutton.Name = "nextbutton";
             this.nextbutton.Size = new System.Drawing.Size(27, 24);
             this.nextbutton.TabIndex = 11;
@@ -169,7 +169,7 @@
             // 
             // choice3
             // 
-            this.choice3.Location = new System.Drawing.Point(211, 102);
+            this.choice3.Location = new System.Drawing.Point(211, 139);
             this.choice3.Margin = new System.Windows.Forms.Padding(2);
             this.choice3.Name = "choice3";
             this.choice3.Size = new System.Drawing.Size(95, 31);
@@ -195,7 +195,7 @@
             this.Controls.Add(this.dialoguePanel);
             this.Controls.Add(this.Character);
             this.Controls.Add(this.Scene);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Character)).EndInit();

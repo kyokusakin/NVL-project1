@@ -1,14 +1,92 @@
 [
   {
-    "id": "1",
+    "id": "2",
     "options": [
       {
-        "nextDialogId": "2",
-        "text": "接受任務"
+        "nextDialogId": "3",
+        "text": "離開"
       },
       {
-        "nextDialogId": "3",
-        "text": "拒絕任務"
+        "nextDialogId": "4",
+        "text": "撿起硬幣"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "options": [
+      {
+        "nextDialogId": "6",
+        "text": "離開"
+      },
+      {
+        "nextDialogId": "7",
+        "text": "撿起硬幣"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "options": [
+      {
+        "nextDialogId": "9",
+        "text": "離開"
+      },
+      {
+        "nextDialogId": "10",
+        "text": "撿起硬幣"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "options": [
+      {
+        "nextDialogId": "12",
+        "text": "進入別墅探索"
+      },
+      {
+        "nextDialogId": "13",
+        "text": "嘗試從森林離開"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "options": [
+      {
+        "nextDialogId": "15",
+        "text": "返回別墅附近"
+      },
+      {
+        "nextDialogId": "16",
+        "text": "繼續往森林深處走"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "options": [
+      {
+        "nextDialogId": "12",
+        "text": "進入別墅探索"
+      },
+      {
+        "nextDialogId": "13",
+        "text": "繼續嘗試從森林離開"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "options": [
+      {
+        "nextDialogId": "18",
+        "text": "大喊並向他求助"
+      },
+      {
+        "nextDialogId": "19",
+        "text": "慢慢靠近確認"
       }
     ]
   }
