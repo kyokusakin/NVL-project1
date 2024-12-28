@@ -127,7 +127,10 @@
   <data name="下載 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下載 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="螢幕擷取畫面 2023-07-28 223624" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\螢幕擷取畫面 2023-07-28 223624.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\森林.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

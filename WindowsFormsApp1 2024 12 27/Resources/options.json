@@ -34,7 +34,8 @@
       },
       {
         "text": "撿起硬幣",
-        "sequenceId": "pickup3_sequence"
+        "sequenceId": "pickup3_sequence",
+        "BackgroundImg":  "Background2"
       }
     ]
   },

@@ -5,14 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using System.Windows.Forms.Integration;
-using Viewbox = System.Windows.Controls.Viewbox;
-using WindowsFormsApp1_2024_12_27.Properties;
+using System.Drawing;
+
 namespace WindowsFormsApp1_2024_12_27
 {
     public partial class Form1 : Form
     {
-        private Dictionary<string, Queue<SequenceItem>> Sequences =new Dictionary<string, Queue<SequenceItem>>();
+        private Dictionary<string, Queue<SequenceItem>> Sequences = new Dictionary<string, Queue<SequenceItem>>();
         private bool isDialoguePlaying = false;
         private bool isChoosingOption = false;
         public const int MaxOptionCount = 3;
@@ -27,29 +26,15 @@ namespace WindowsFormsApp1_2024_12_27
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.AutoSize = false;
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         }
-        private void ToggleFullScreen()
-        {
-            if (FormBorderStyle == FormBorderStyle.None)
-            {
-                this.FormBorderStyle = FormBorderStyle.Sizable;
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
-        public void InitializeData()
+
+        public async void InitializeData()
         {
             LoadDialogues();
             LoadOptions();
             LoadSequence();
             DisplayChoices(false);
+            ChangeBackgroundImage("Background1");
             Speaker.Visible = false;
             label1.Visible = true;
             textBox1.Visible = true;
@@ -71,14 +56,14 @@ namespace WindowsFormsApp1_2024_12_27
             string json = File.ReadAllText(@"Resources/options.json");
             var optionsList = JsonConvert.DeserializeObject<List<OptionData>>(json);
 
-            options = optionsList.ToDictionary(options=>options.Id);
+            options = optionsList.ToDictionary(options => options.Id);
         }
 
         private void LoadSequence()
         {
             CurrentSequence = null;
             Sequences.Clear();
-            string[] files = Directory.GetFiles(@"./Resources/sequence");
+            string[] files = Directory.GetFiles(@"Resources/sequence");
 
             foreach (string file in files)
             {
@@ -124,7 +109,7 @@ namespace WindowsFormsApp1_2024_12_27
                     Character.Visible = false;
                 }
                 DialogueLabel.Text = "";
-                
+
                 foreach (char c in dialogueText)
                 {
                     DialogueLabel.Text += c;
@@ -148,7 +133,7 @@ namespace WindowsFormsApp1_2024_12_27
             //讀取選項清單
             var optionData = options[optionId];
             //設定選項資料
-            for(int i =0; i< optionData.Options.Count && i< MaxOptionCount; i++)
+            for (int i = 0; i < optionData.Options.Count && i < MaxOptionCount; i++)
             {
                 Option option = optionData.Options[i];
                 Button btn_choice = Choices[i];
@@ -168,7 +153,7 @@ namespace WindowsFormsApp1_2024_12_27
                 return;
             }
 
-            MainCharactor = textBox1.Text; 
+            MainCharactor = textBox1.Text;
             Speaker.Visible = true;
             label1.Visible = false;
             textBox1.Visible = false;
@@ -210,11 +195,11 @@ namespace WindowsFormsApp1_2024_12_27
                 btn.Visible = IsVisible;
         }
 
-        private void choice_Click(object sender, EventArgs e)
+        private async void choice_Click(object sender, EventArgs e)
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             Button btn = (Button)sender;
-            Option option  = (Option)btn.Tag;
+            Option option = (Option)btn.Tag;
             isChoosingOption = false;
             nextbutton.Enabled = true;
             DisplayChoices(false);
@@ -229,20 +214,58 @@ namespace WindowsFormsApp1_2024_12_27
                     CurrentSequence = Sequences[option.sequenceId];
                 }
             }
+
+            if (!string.IsNullOrEmpty(option.BackgroundImg))
+            {
+                ChangeBackgroundImage(option.BackgroundImg);
+            }
             ProcessNextSequenceItem();
         }
 
-        private void Speaker_Click(object sender, EventArgs e)
+        private void Speaker_Click(object sender, EventArgs e) { }
+
+        private void ChangeBackgroundImage(string resourceName)
         {
+            if (!string.IsNullOrEmpty(resourceName))
+            {
+                try
+                {
+                    // 使用資源管理器獲取資源
+                    object resource = WindowsFormsApp1_2024_12_27.Properties.Resources.ResourceManager.GetObject(resourceName);
+
+                    if (resource is Bitmap bitmap)
+                    {
+                        // 如果資源是 Bitmap，直接設置為背景圖片
+                        Scene.Image = bitmap;
+                        Scene.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else if (resource is byte[] imageData)
+                    {
+                        // 如果資源是 byte[]，則將其轉換為 Bitmap
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            Scene.Image = Image.FromStream(ms);
+                        }
+                        Scene.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException($"資源 {resourceName} 不是有效的 Bitmap 或 byte[] 資源。");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // 處理加載圖像時的異常
+                    MessageBox.Show($"無法從資源中加載背景圖像：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
+
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.F4)
-            {
-                ToggleFullScreen();
-            }
-            else if (keyData == Keys.Enter)
+            if (keyData == Keys.Enter)
             {
                 ProcessNextSequenceItem();
             }
@@ -262,7 +285,12 @@ namespace WindowsFormsApp1_2024_12_27
             InitializeData();
         }
 
-        private void panel_Main_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -284,6 +312,7 @@ namespace WindowsFormsApp1_2024_12_27
     {
         public string Text { get; set; }
         public string sequenceId { get; set; }
+        public string BackgroundImg { get; set; }
     }
 
 

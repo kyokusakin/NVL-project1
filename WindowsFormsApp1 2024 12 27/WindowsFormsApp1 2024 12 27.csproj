@@ -105,6 +105,12 @@
     <None Include="Resources\options.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\sequence\NPC1_1_sequence.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sequence\NPC1_2_sequence.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\sequence\pickup1_sequence.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

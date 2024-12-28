@@ -63,6 +63,26 @@ namespace WindowsFormsApp1_2024_12_27.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap Background1 {
+            get {
+                object obj = ResourceManager.GetObject("Background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] Background2 {
+            get {
+                object obj = ResourceManager.GetObject("Background2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_1625 {
             get {
                 object obj = ResourceManager.GetObject("IMG_1625", resourceCulture);
@@ -86,16 +106,6 @@ namespace WindowsFormsApp1_2024_12_27.Properties {
         internal static System.Drawing.Bitmap 喵豚 {
             get {
                 object obj = ResourceManager.GetObject("喵豚", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 螢幕擷取畫面_2023_07_28_223624 {
-            get {
-                object obj = ResourceManager.GetObject("螢幕擷取畫面 2023-07-28 223624", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
