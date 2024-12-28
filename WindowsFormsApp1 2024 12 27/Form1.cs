@@ -7,17 +7,18 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Windows.Forms.Integration;
 using Viewbox = System.Windows.Controls.Viewbox;
+using WindowsFormsApp1_2024_12_27.Properties;
 namespace WindowsFormsApp1_2024_12_27
 {
     public partial class Form1 : Form
     {
-        private Queue<SequenceItem> sequence = new Queue<SequenceItem>();
+        private Dictionary<string, Queue<SequenceItem>> Sequences =new Dictionary<string, Queue<SequenceItem>>();
         private bool isDialoguePlaying = false;
         private bool isChoosingOption = false;
         public const int MaxOptionCount = 3;
         private Dictionary<string, Dialogue> dialogues;
         private Dictionary<string, OptionData> options;
-
+        public Queue<SequenceItem> CurrentSequence { get; set; } = new Queue<SequenceItem>();
         public string MainCharactor = "";
         public Form1()
         {
@@ -58,12 +59,22 @@ namespace WindowsFormsApp1_2024_12_27
 
         private void LoadSequence()
         {
-            string json = File.ReadAllText(@"Resources/sequence.json");
-            var sequenceList = JsonConvert.DeserializeObject<List<SequenceItem>>(json);
-            foreach (var item in sequenceList)
+            string[] files = Directory.GetFiles(@"./Resources");
+
+            foreach (string file in files)
             {
-                sequence.Enqueue(item);
+                if (!file.Contains("sequence"))
+                    continue;
+                string json = File.ReadAllText(file);
+                var sequenceList = JsonConvert.DeserializeObject<List<SequenceItem>>(json);
+
+                string name = Path.GetFileNameWithoutExtension(file);
+                Queue<SequenceItem> new_seq = new Queue<SequenceItem>();
+                foreach (var item in sequenceList)
+                    new_seq.Enqueue(item);
+                Sequences.Add(name, new_seq);
             }
+            CurrentSequence = Sequences["sequence"];
         }
 
         private async void ShowDialogue(string dialogueId)
@@ -146,12 +157,12 @@ namespace WindowsFormsApp1_2024_12_27
 
         private void ProcessNextSequenceItem()
         {
-            if (sequence.Count == 0)
+            if (Sequences.Count == 0)
             {
                 MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            var item = sequence.Dequeue();
+            var item = CurrentSequence.Dequeue();
             if (item.Type == "dialogue")
             {
                 ShowDialogue(item.Id);
@@ -194,7 +205,8 @@ namespace WindowsFormsApp1_2024_12_27
 
         private void DialogueLabel_Click(object sender, EventArgs e)
         {
-            ProcessNextSequenceItem();
+            if(!isChoosingOption)
+                ProcessNextSequenceItem();
         }
 
         private void nextbutton_Click(object sender, EventArgs e)
