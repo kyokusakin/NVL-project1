@@ -28,13 +28,13 @@ namespace WindowsFormsApp1_2024_12_27
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
-
-            ElementHost host = new ElementHost
-            {
+            //自動放大縮小匹配介面
+            ElementHost host = new ElementHost {
                 Dock = DockStyle.Fill
             };
-            WindowsFormsHost windowsFormsHost = new WindowsFormsHost();
-            windowsFormsHost.Child = panel_Main;
+            WindowsFormsHost windowsFormsHost = new WindowsFormsHost {
+                Child = panel_Main
+            };
 
             Viewbox viewbox = new Viewbox {
                 Child = windowsFormsHost
@@ -42,7 +42,6 @@ namespace WindowsFormsApp1_2024_12_27
             host.Child = viewbox;
             this.Controls.Add(host);
         }
-
         private void LoadDialogues()
         {
             string json = File.ReadAllText(@"Resources/dialogues.json");
