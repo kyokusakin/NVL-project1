@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -55,6 +55,10 @@ namespace WindowsFormsApp1_2024_12_27
             if (isDialoguePlaying) return;
             isDialoguePlaying = true;
 
+            if (isChoosingOption)
+            {
+                return;
+            }
             // 禁用 nextbutton
             nextbutton.Enabled = false;
 
@@ -89,6 +93,7 @@ namespace WindowsFormsApp1_2024_12_27
         {
             choice1.Visible = false;
             choice2.Visible = false;
+            nextbutton.Enabled = false;
 
             if (optionIds.Count > 0)
             {
@@ -96,7 +101,6 @@ namespace WindowsFormsApp1_2024_12_27
                 choice1.Tag = options[optionIds[0]].NextDialogueId;
                 choice1.Visible = true;
                 choice1.Enabled = true;
-                nextbutton.Enabled = false;
             }
 
             if (optionIds.Count > 1)
@@ -105,7 +109,6 @@ namespace WindowsFormsApp1_2024_12_27
                 choice2.Tag = options[optionIds[1]].NextDialogueId;
                 choice2.Visible = true;
                 choice2.Enabled = true;
-                nextbutton.Enabled= false;
             }
 
 
@@ -139,10 +142,6 @@ namespace WindowsFormsApp1_2024_12_27
                 MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (isChoosingOption)
-            {
-                return;
-            }
             var item = sequence.Dequeue();
             if (item.Type == "dialogue")
             {
@@ -151,21 +150,36 @@ namespace WindowsFormsApp1_2024_12_27
             else if (item.Type == "option")
             {
                 ShowOptions(item.Options);
+                isChoosingOption = true;
             }
         }
 
         private void choice1_Click(object sender, EventArgs e)
         {
+            choice1.Enabled = false;
+            choice2.Enabled = false;
+            choice1.Visible = false;
+            choice2.Visible = false;
+            nextbutton.Enabled = true;
+            isChoosingOption = false;
+
             string nextDialogueId = (string)choice1.Tag;
             ProcessNextDialogue(nextDialogueId);
-            nextbutton.Enabled = true;
         }
 
         private void choice2_Click(object sender, EventArgs e)
         {
+            choice1.Enabled = false;
+            choice2.Enabled = false;
+            choice1.Visible = false;
+            choice2.Visible = false;
+            nextbutton.Enabled = true;
+            isChoosingOption = false;
+
             string nextDialogueId = (string)choice2.Tag;
             ProcessNextDialogue(nextDialogueId);
-            nextbutton.Enabled = true;
+
+
         }
 
         private void ProcessNextDialogue(string dialogueId)
