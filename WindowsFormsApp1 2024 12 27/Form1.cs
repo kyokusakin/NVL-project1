@@ -5,7 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-
+using System.Windows.Forms.Integration;
+using Viewbox = System.Windows.Controls.Viewbox;
 namespace WindowsFormsApp1_2024_12_27
 {
     public partial class Form1 : Form
@@ -17,6 +18,7 @@ namespace WindowsFormsApp1_2024_12_27
         private Dictionary<string, Dialogue> dialogues;
         private Dictionary<string, OptionData> options;
 
+       
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +28,19 @@ namespace WindowsFormsApp1_2024_12_27
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
+
+            ElementHost host = new ElementHost
+            {
+                Dock = DockStyle.Fill
+            };
+            WindowsFormsHost windowsFormsHost = new WindowsFormsHost();
+            windowsFormsHost.Child = panel_Main;
+
+            Viewbox viewbox = new Viewbox {
+                Child = windowsFormsHost
+            };
+            host.Child = viewbox;
+            this.Controls.Add(host);
         }
 
         private void LoadDialogues()

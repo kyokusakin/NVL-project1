@@ -29,131 +29,140 @@
             private void InitializeComponent()
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.DialogueLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.choice1 = new System.Windows.Forms.Button();
-            this.choice2 = new System.Windows.Forms.Button();
-            this.Speaker = new System.Windows.Forms.Label();
+            this.panel_Main = new System.Windows.Forms.Panel();
+            this.choice3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Character = new System.Windows.Forms.PictureBox();
-            this.Scene = new System.Windows.Forms.PictureBox();
+            this.Speaker = new System.Windows.Forms.Label();
+            this.choice2 = new System.Windows.Forms.Button();
+            this.choice1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DialogueLabel = new System.Windows.Forms.Label();
             this.dialoguePanel = new System.Windows.Forms.Panel();
             this.nextbutton = new System.Windows.Forms.Button();
-            this.choice3 = new System.Windows.Forms.Button();
+            this.Character = new System.Windows.Forms.PictureBox();
+            this.Scene = new System.Windows.Forms.PictureBox();
+            this.panel_Main.SuspendLayout();
+            this.dialoguePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Scene)).BeginInit();
-            this.dialoguePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DialogueLabel
+            // panel_Main
             // 
-            this.DialogueLabel.AutoSize = true;
-            this.DialogueLabel.Location = new System.Drawing.Point(16, 218);
-            this.DialogueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DialogueLabel.Name = "DialogueLabel";
-            this.DialogueLabel.Size = new System.Drawing.Size(33, 12);
-            this.DialogueLabel.TabIndex = 0;
-            this.DialogueLabel.Text = "label1";
-            this.DialogueLabel.Visible = false;
+            this.panel_Main.Controls.Add(this.choice3);
+            this.panel_Main.Controls.Add(this.label1);
+            this.panel_Main.Controls.Add(this.Speaker);
+            this.panel_Main.Controls.Add(this.choice2);
+            this.panel_Main.Controls.Add(this.choice1);
+            this.panel_Main.Controls.Add(this.button1);
+            this.panel_Main.Controls.Add(this.textBox1);
+            this.panel_Main.Controls.Add(this.DialogueLabel);
+            this.panel_Main.Controls.Add(this.dialoguePanel);
+            this.panel_Main.Controls.Add(this.Character);
+            this.panel_Main.Controls.Add(this.Scene);
+            this.panel_Main.Location = new System.Drawing.Point(3, 2);
+            this.panel_Main.Name = "panel_Main";
+            this.panel_Main.Size = new System.Drawing.Size(541, 312);
+            this.panel_Main.TabIndex = 0;
             // 
-            // textBox1
+            // choice3
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 148);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 22);
-            this.textBox1.TabIndex = 1;
+            this.choice3.Location = new System.Drawing.Point(213, 141);
+            this.choice3.Margin = new System.Windows.Forms.Padding(2);
+            this.choice3.Name = "choice3";
+            this.choice3.Size = new System.Drawing.Size(95, 31);
+            this.choice3.TabIndex = 22;
+            this.choice3.Text = "button3";
+            this.choice3.UseVisualStyleBackColor = true;
+            this.choice3.Visible = false;
+            this.choice3.Click += new System.EventHandler(this.choice_Click);
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(268, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "確認";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 123);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "玩家名稱";
             // 
-            // choice1
+            // Speaker
             // 
-            this.choice1.Location = new System.Drawing.Point(211, 52);
-            this.choice1.Margin = new System.Windows.Forms.Padding(2);
-            this.choice1.Name = "choice1";
-            this.choice1.Size = new System.Drawing.Size(95, 31);
-            this.choice1.TabIndex = 4;
-            this.choice1.Text = "button2";
-            this.choice1.UseVisualStyleBackColor = true;
-            this.choice1.Visible = false;
-            this.choice1.Click += new System.EventHandler(this.choice_Click);
+            this.Speaker.AutoSize = true;
+            this.Speaker.Location = new System.Drawing.Point(18, 186);
+            this.Speaker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Speaker.Name = "Speaker";
+            this.Speaker.Size = new System.Drawing.Size(33, 12);
+            this.Speaker.TabIndex = 19;
+            this.Speaker.Text = "label2";
+            this.Speaker.Visible = false;
+            this.Speaker.Click += new System.EventHandler(this.Speaker_Click);
             // 
             // choice2
             // 
-            this.choice2.Location = new System.Drawing.Point(211, 98);
+            this.choice2.Location = new System.Drawing.Point(213, 100);
             this.choice2.Margin = new System.Windows.Forms.Padding(2);
             this.choice2.Name = "choice2";
             this.choice2.Size = new System.Drawing.Size(95, 31);
-            this.choice2.TabIndex = 5;
+            this.choice2.TabIndex = 16;
             this.choice2.Text = "button3";
             this.choice2.UseVisualStyleBackColor = true;
             this.choice2.Visible = false;
             this.choice2.Click += new System.EventHandler(this.choice_Click);
             // 
-            // Speaker
+            // choice1
             // 
-            this.Speaker.AutoSize = true;
-            this.Speaker.Location = new System.Drawing.Point(16, 184);
-            this.Speaker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Speaker.Name = "Speaker";
-            this.Speaker.Size = new System.Drawing.Size(33, 12);
-            this.Speaker.TabIndex = 8;
-            this.Speaker.Text = "label2";
-            this.Speaker.Visible = false;
-            this.Speaker.Click += new System.EventHandler(this.Speaker_Click);
+            this.choice1.Location = new System.Drawing.Point(213, 54);
+            this.choice1.Margin = new System.Windows.Forms.Padding(2);
+            this.choice1.Name = "choice1";
+            this.choice1.Size = new System.Drawing.Size(95, 31);
+            this.choice1.TabIndex = 15;
+            this.choice1.Text = "button2";
+            this.choice1.UseVisualStyleBackColor = true;
+            this.choice1.Visible = false;
+            this.choice1.Click += new System.EventHandler(this.choice_Click);
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(181, 121);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "玩家名稱";
+            this.button1.Location = new System.Drawing.Point(270, 143);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 31);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "確認";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Character
+            // textBox1
             // 
-            this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
-            this.Character.Location = new System.Drawing.Point(422, 95);
-            this.Character.Margin = new System.Windows.Forms.Padding(2);
-            this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(113, 119);
-            this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Character.TabIndex = 7;
-            this.Character.TabStop = false;
-            this.Character.Visible = false;
-            this.Character.Click += new System.EventHandler(this.Character_Click);
+            this.textBox1.Location = new System.Drawing.Point(175, 150);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(68, 22);
+            this.textBox1.TabIndex = 13;
             // 
-            // Scene
+            // DialogueLabel
             // 
-            this.Scene.Image = global::WindowsFormsApp1_2024_12_27.Properties.Resources.螢幕擷取畫面_2023_07_28_223624;
-            this.Scene.Location = new System.Drawing.Point(-1, 0);
-            this.Scene.Margin = new System.Windows.Forms.Padding(2);
-            this.Scene.Name = "Scene";
-            this.Scene.Size = new System.Drawing.Size(536, 309);
-            this.Scene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Scene.TabIndex = 6;
-            this.Scene.TabStop = false;
+            this.DialogueLabel.AutoSize = true;
+            this.DialogueLabel.Location = new System.Drawing.Point(18, 220);
+            this.DialogueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DialogueLabel.Name = "DialogueLabel";
+            this.DialogueLabel.Size = new System.Drawing.Size(33, 12);
+            this.DialogueLabel.TabIndex = 12;
+            this.DialogueLabel.Text = "label1";
+            this.DialogueLabel.Visible = false;
             // 
             // dialoguePanel
             // 
             this.dialoguePanel.Controls.Add(this.nextbutton);
-            this.dialoguePanel.Location = new System.Drawing.Point(-1, 211);
+            this.dialoguePanel.Location = new System.Drawing.Point(1, 213);
             this.dialoguePanel.Margin = new System.Windows.Forms.Padding(2);
             this.dialoguePanel.Name = "dialoguePanel";
             this.dialoguePanel.Size = new System.Drawing.Size(536, 87);
-            this.dialoguePanel.TabIndex = 10;
+            this.dialoguePanel.TabIndex = 21;
+            this.dialoguePanel.Click += new System.EventHandler(this.DialogueLabel_Click);
             // 
             // nextbutton
             // 
@@ -167,59 +176,64 @@
             this.nextbutton.Visible = false;
             this.nextbutton.Click += new System.EventHandler(this.nextbutton_Click);
             // 
-            // choice3
+            // Character
             // 
-            this.choice3.Location = new System.Drawing.Point(211, 139);
-            this.choice3.Margin = new System.Windows.Forms.Padding(2);
-            this.choice3.Name = "choice3";
-            this.choice3.Size = new System.Drawing.Size(95, 31);
-            this.choice3.TabIndex = 11;
-            this.choice3.Text = "button3";
-            this.choice3.UseVisualStyleBackColor = true;
-            this.choice3.Visible = false;
+            this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
+            this.Character.Location = new System.Drawing.Point(424, 97);
+            this.Character.Margin = new System.Windows.Forms.Padding(2);
+            this.Character.Name = "Character";
+            this.Character.Size = new System.Drawing.Size(113, 119);
+            this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Character.TabIndex = 18;
+            this.Character.TabStop = false;
+            this.Character.Visible = false;
+            this.Character.Click += new System.EventHandler(this.Character_Click);
+            // 
+            // Scene
+            // 
+            this.Scene.Image = global::WindowsFormsApp1_2024_12_27.Properties.Resources.螢幕擷取畫面_2023_07_28_223624;
+            this.Scene.Location = new System.Drawing.Point(1, 2);
+            this.Scene.Margin = new System.Windows.Forms.Padding(2);
+            this.Scene.Name = "Scene";
+            this.Scene.Size = new System.Drawing.Size(536, 309);
+            this.Scene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Scene.TabIndex = 17;
+            this.Scene.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(533, 300);
-            this.Controls.Add(this.choice3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Speaker);
-            this.Controls.Add(this.choice2);
-            this.Controls.Add(this.choice1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.DialogueLabel);
-            this.Controls.Add(this.dialoguePanel);
-            this.Controls.Add(this.Character);
-            this.Controls.Add(this.Scene);
+            this.ClientSize = new System.Drawing.Size(545, 315);
+            this.Controls.Add(this.panel_Main);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.panel_Main.ResumeLayout(false);
+            this.panel_Main.PerformLayout();
+            this.dialoguePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Character)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Scene)).EndInit();
-            this.dialoguePanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
             }
 
-            #endregion
+        #endregion
 
-            private System.Windows.Forms.Label DialogueLabel;
-            private System.Windows.Forms.TextBox textBox1;
-            private System.Windows.Forms.Button button1;
-            private System.Windows.Forms.Button choice1;
-            private System.Windows.Forms.Button choice2;
-            private System.Windows.Forms.PictureBox Scene;
-            private System.Windows.Forms.PictureBox Character;
-            private System.Windows.Forms.Label Speaker;
-            private System.Windows.Forms.Label label1;
-            private System.Windows.Forms.Panel dialoguePanel;
-            private System.Windows.Forms.Button nextbutton;
+        private System.Windows.Forms.Panel panel_Main;
         private System.Windows.Forms.Button choice3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Speaker;
+        private System.Windows.Forms.Button choice2;
+        private System.Windows.Forms.Button choice1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label DialogueLabel;
+        private System.Windows.Forms.Panel dialoguePanel;
+        private System.Windows.Forms.Button nextbutton;
+        private System.Windows.Forms.PictureBox Character;
+        private System.Windows.Forms.PictureBox Scene;
     }
     }
 
