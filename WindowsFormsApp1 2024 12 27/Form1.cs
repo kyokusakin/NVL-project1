@@ -23,9 +23,7 @@ namespace WindowsFormsApp1_2024_12_27
         public Form1()
         {
             InitializeComponent();
-            LoadDialogues();
-            LoadOptions();
-            LoadSequence();
+            InitializeData();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
@@ -43,6 +41,22 @@ namespace WindowsFormsApp1_2024_12_27
             host.Child = viewbox;
             this.Controls.Add(host);
         }
+        public void InitializeData()
+        {
+            LoadDialogues();
+            LoadOptions();
+            LoadSequence();
+            DisplayChoices(false);
+            Speaker.Visible = false;
+            label1.Visible = true;
+            textBox1.Visible = true;
+            button1.Visible = true;
+            dialoguePanel.Visible = true;
+            isChoosingOption = false;
+            isDialoguePlaying = false;
+            DialogueLabel.Visible = false;
+            nextbutton.Visible = false;
+        }
         private void LoadDialogues()
         {
             string json = File.ReadAllText(@"Resources/dialogues.json");
@@ -59,6 +73,8 @@ namespace WindowsFormsApp1_2024_12_27
 
         private void LoadSequence()
         {
+            CurrentSequence = null;
+            Sequences.Clear();
             string[] files = Directory.GetFiles(@"./Resources");
 
             foreach (string file in files)
@@ -74,7 +90,7 @@ namespace WindowsFormsApp1_2024_12_27
                     new_seq.Enqueue(item);
                 Sequences.Add(name, new_seq);
             }
-            CurrentSequence = Sequences["sequence"];
+            CurrentSequence = Sequences["start_sequence"];
         }
 
         private async void ShowDialogue(string dialogueId)
@@ -127,7 +143,7 @@ namespace WindowsFormsApp1_2024_12_27
                 Option option = optionData.Options[i];
                 Button btn_choice = Choices[i];
                 btn_choice.Text = option.Text;
-                btn_choice.Tag = option.NextDialogId;
+                btn_choice.Tag = option;
                 btn_choice.Visible = true;
                 btn_choice.Enabled = true;
                 nextbutton.Enabled = false;
@@ -151,15 +167,15 @@ namespace WindowsFormsApp1_2024_12_27
 
             DialogueLabel.Visible = true;
             nextbutton.Visible = true;
-
+            nextbutton.Enabled = true;
             ProcessNextSequenceItem();
         }
 
         private void ProcessNextSequenceItem()
         {
-            if (Sequences.Count == 0)
+            if (CurrentSequence.Count == 0)
             {
-                MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (isChoosingOption)
@@ -188,11 +204,13 @@ namespace WindowsFormsApp1_2024_12_27
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             Button btn = (Button)sender;
-            string nextDialogueId = btn.Tag.ToString();
+            Option option  = (Option)btn.Tag;
             isChoosingOption = false;
             nextbutton.Enabled = true;
             DisplayChoices(false);
-            ShowDialogue(nextDialogueId);
+            if(!string.IsNullOrEmpty(option.sequenceId))
+                CurrentSequence = Sequences[option.sequenceId];
+            ProcessNextSequenceItem();
         }
 
         private void Speaker_Click(object sender, EventArgs e)
@@ -214,6 +232,11 @@ namespace WindowsFormsApp1_2024_12_27
         private void Character_Click(object sender, EventArgs e)
         {
         }
+
+        private void button_Reset_Click(object sender, EventArgs e)
+        {
+            InitializeData();
+        }
     }
 
     public class Dialogue
@@ -231,7 +254,7 @@ namespace WindowsFormsApp1_2024_12_27
     public class Option
     {
         public string Text { get; set; }
-        public string NextDialogId { get; set; }
+        public string sequenceId { get; set; }
     }
 
 

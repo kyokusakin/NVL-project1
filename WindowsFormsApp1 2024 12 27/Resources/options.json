@@ -3,12 +3,12 @@
     "id": "1",
     "options": [
       {
-        "nextDialogId": "5",
-        "text": "離開"
+        "text": "離開",
+        "sequenceId": "leave1_sequence"
       },
       {
-        "nextDialogId": "10",
-        "text": "撿起硬幣"
+        "text": "撿起硬幣",
+        "sequenceId": "pickup1_sequence"
       }
     ]
   },
@@ -16,12 +16,13 @@
     "id": "2",
     "options": [
       {
-        "nextDialogId": "11",
-        "text": "離開"
+        "text": "離開",
+        "sequenceId": "leave2_sequence"
       },
       {
         "nextDialogId": "20",
-        "text": "撿起硬幣"
+        "text": "撿起硬幣",
+        "sequenceId": "pickup2_sequence"
       }
     ]
   },
@@ -29,12 +30,12 @@
     "id": "3",
     "options": [
       {
-        "nextDialogId": "21",
-        "text": "離開"
+        "text": "離開",
+        "sequenceId": "leave3_sequence"
       },
       {
-        "nextDialogId": "35",
-        "text": "撿起硬幣"
+        "text": "撿起硬幣",
+        "sequenceId": "pickup3_sequence"
       }
     ]
   },
@@ -42,11 +43,9 @@
     "id": "4",
     "options": [
       {
-        "nextDialogId": "42",
         "text": "進入別墅探索"
       },
       {
-        "nextDialogId": "45",
         "text": "嘗試從森林離開"
       }
     ]
@@ -55,11 +54,9 @@
     "id": "5",
     "options": [
       {
-        "nextDialogId": "50",
         "text": "返回別墅附近"
       },
       {
-        "nextDialogId": "52",
         "text": "繼續往森林深處走"
       }
     ]
@@ -68,11 +65,9 @@
     "id": "6",
     "options": [
       {
-        "nextDialogId": "42",
         "text": "進入別墅探索"
       },
       {
-        "nextDialogId": "45",
         "text": "繼續嘗試從森林離開"
       }
     ]
@@ -81,11 +76,9 @@
     "id": "7",
     "options": [
       {
-        "nextDialogId": "58",
         "text": "大喊並向他求助"
       },
       {
-        "nextDialogId": "78",
         "text": "慢慢靠近確認"
       }
     ]

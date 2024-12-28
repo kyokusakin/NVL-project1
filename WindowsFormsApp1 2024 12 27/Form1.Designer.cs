@@ -42,6 +42,7 @@
             this.nextbutton = new System.Windows.Forms.Button();
             this.Character = new System.Windows.Forms.PictureBox();
             this.Scene = new System.Windows.Forms.PictureBox();
+            this.button_Reset = new System.Windows.Forms.Button();
             this.panel_Main.SuspendLayout();
             this.dialoguePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             // panel_Main
             // 
+            this.panel_Main.Controls.Add(this.button_Reset);
             this.panel_Main.Controls.Add(this.choice3);
             this.panel_Main.Controls.Add(this.label1);
             this.panel_Main.Controls.Add(this.Speaker);
@@ -200,6 +202,18 @@
             this.Scene.TabIndex = 17;
             this.Scene.TabStop = false;
             // 
+            // button_Reset
+            // 
+            this.button_Reset.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_Reset.Location = new System.Drawing.Point(2, 2);
+            this.button_Reset.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.Size = new System.Drawing.Size(49, 43);
+            this.button_Reset.TabIndex = 23;
+            this.button_Reset.Text = "🔙";
+            this.button_Reset.UseVisualStyleBackColor = true;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -234,6 +248,7 @@
         private System.Windows.Forms.Button nextbutton;
         private System.Windows.Forms.PictureBox Character;
         private System.Windows.Forms.PictureBox Scene;
+        private System.Windows.Forms.Button button_Reset;
     }
     }
 

@@ -1,53 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\NVL-project1\\",
+  "WorkspaceRootPath": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|D:\\Desktop\\NVL-project1\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\pickup3_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\pickup3_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\pickup2_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\pickup2_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\start_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\start_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\pickup1_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\pickup1_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\leave3_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\leave3_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\leave2_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\leave2_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\leave1_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\leave1_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|D:\\Desktop\\NVL-project1\\windowsformsapp1 2024 12 27\\resources\\dialogues.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\dialogues.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Desktop\\leave1_sequnce.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1\\windowsformsapp1 2024 12 27\\resources\\options.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\options.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|D:\\Desktop\\NVL-project1\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\resources\\leave2_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\leave2_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\resources\\leave3_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\leave3_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\resources\\pickup1_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\pickup1_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|c:\\users\\oopot\\onedrive\\\u684C\u9762\\genshin\\windowsformsapp1 2024 12 27\\resources\\pickup2_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\pickup2_sequence.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,162 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "pickup3_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup3_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\pickup3_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup3_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\pickup3_sequnce.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T08:40:13.104Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "pickup2_sequence.json",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequence.json",
+              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequence.json",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequence.json",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequence.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:27:07.88Z",
+              "WhenOpened": "2024-12-28T08:39:30.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "pickup1_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequnce.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "pickup1_sequence.json",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequence.json",
+              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequence.json",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequence.json",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\pickup1_sequence.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:26:17.321Z",
+              "WhenOpened": "2024-12-28T08:39:26.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "leave3_sequence.json",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequence.json",
+              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequence.json",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequence.json",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequence.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-28T08:39:19.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "pickup2_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\pickup2_sequnce.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "leave2_sequence.json",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequence.json",
+              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequence.json",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequence.json",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequence.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:21:54.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "leave3_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\leave3_sequnce.json",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:19:45.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "leave2_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\leave2_sequnce.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:19:32.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "leave1_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave1_sequnce.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\leave1_sequnce.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\leave1_sequnce.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\leave1_sequnce.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:19:24.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "leave1_sequnce.json",
-              "DocumentMoniker": "D:\\Desktop\\leave1_sequnce.json",
-              "RelativeDocumentMoniker": "..\\leave1_sequnce.json",
-              "ToolTip": "D:\\Desktop\\leave1_sequnce.json",
-              "RelativeToolTip": "..\\leave1_sequnce.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T08:18:55.614Z",
+              "WhenOpened": "2024-12-28T08:39:16.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "ToolTip": "C:\\Users\\oopot\\OneDrive\\\u684C\u9762\\genshin\\WindowsFormsApp1 2024 12 27\\Form1.cs",
               "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwEwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAYwLEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T06:51:06.234Z",
+              "WhenOpened": "2024-12-28T08:37:02.674Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "start_sequence.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\start_sequence.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\start_sequence.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\start_sequence.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\start_sequence.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T07:29:15.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "options.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\options.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\options.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\options.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\options.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T07:28:46.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dialogues.json",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
-              "ViewState": "AgIAACIBAAAAAAAAAAAAADoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-28T07:28:33.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form1.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "ToolTip": "D:\\Desktop\\NVL-project1\\WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T06:49:55.243Z",
-              "EditorCaption": " [\u8A2D\u8A08]"
             }
           ]
         }
