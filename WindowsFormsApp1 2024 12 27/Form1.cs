@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -57,6 +57,10 @@ namespace WindowsFormsApp1_2024_12_27
             if (isDialoguePlaying) return;
             isDialoguePlaying = true;
 
+            if (isChoosingOption)
+            {
+                return;
+            }
             // 禁用 nextbutton
             nextbutton.Enabled = false;
 
@@ -133,10 +137,6 @@ namespace WindowsFormsApp1_2024_12_27
                 MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (isChoosingOption)
-            {
-                return;
-            }
             var item = sequence.Dequeue();
             if (item.Type == "dialogue")
             {
@@ -145,6 +145,7 @@ namespace WindowsFormsApp1_2024_12_27
             else if (item.Type == "option")
             {
                 ShowOptions(item.Option);
+                isChoosingOption = true;
             }
         }
         public void DisplayChoices(bool IsVisible)

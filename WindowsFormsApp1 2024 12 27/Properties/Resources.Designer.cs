@@ -73,6 +73,16 @@ namespace WindowsFormsApp1_2024_12_27.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap 下載__1_ {
+            get {
+                object obj = ResourceManager.GetObject("下載 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap 喵豚 {
             get {
                 object obj = ResourceManager.GetObject("喵豚", resourceCulture);
