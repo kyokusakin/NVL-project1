@@ -13,8 +13,9 @@ namespace WindowsFormsApp1_2024_12_27
         private Queue<SequenceItem> sequence = new Queue<SequenceItem>();
         private bool isDialoguePlaying = false;
         private bool isChoosingOption = false;
+        public const int MaxOptionCount = 3;
         private Dictionary<string, Dialogue> dialogues;
-        private Dictionary<string, Option> options;
+        private Dictionary<string, OptionData> options;
 
         public Form1()
         {
@@ -36,8 +37,9 @@ namespace WindowsFormsApp1_2024_12_27
         private void LoadOptions()
         {
             string json = File.ReadAllText(@"Resources/options.json");
-            var optionsList = JsonConvert.DeserializeObject<List<Option>>(json);
-            options = optionsList.ToDictionary(option => option.Id, option => option);
+            var optionsList = JsonConvert.DeserializeObject<List<OptionData>>(json);
+
+            options = optionsList.ToDictionary(options=>options.Id);
         }
 
         private void LoadSequence()
@@ -80,35 +82,27 @@ namespace WindowsFormsApp1_2024_12_27
             }
 
             isDialoguePlaying = false;
-
             // 啟用 nextbutton
             nextbutton.Enabled = true;
         }
 
-        private void ShowOptions(List<string> optionIds)
+        private void ShowOptions(string optionId)
         {
-            choice1.Visible = false;
-            choice2.Visible = false;
-
-            if (optionIds.Count > 0)
+            Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
+            DisplayChoices(false);
+            //讀取選項清單
+            var optionData = options[optionId];
+            //設定選項資料
+            for(int i =0; i< optionData.Options.Count && i< MaxOptionCount; i++)
             {
-                choice1.Text = options[optionIds[0]].Text;
-                choice1.Tag = options[optionIds[0]].NextDialogueId;
-                choice1.Visible = true;
-                choice1.Enabled = true;
+                Option option = optionData.Options[i];
+                Button btn_choice = Choices[i];
+                btn_choice.Text = option.Text;
+                btn_choice.Tag = option.NextDialogId;
+                btn_choice.Visible = true;
+                btn_choice.Enabled = true;
                 nextbutton.Enabled = false;
             }
-
-            if (optionIds.Count > 1)
-            {
-                choice2.Text = options[optionIds[1]].Text;
-                choice2.Tag = options[optionIds[1]].NextDialogueId;
-                choice2.Visible = true;
-                choice2.Enabled = true;
-                nextbutton.Enabled= false;
-            }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -150,22 +144,24 @@ namespace WindowsFormsApp1_2024_12_27
             }
             else if (item.Type == "option")
             {
-                ShowOptions(item.Options);
+                ShowOptions(item.Option);
             }
         }
-
-        private void choice1_Click(object sender, EventArgs e)
+        public void DisplayChoices(bool IsVisible)
         {
-            string nextDialogueId = (string)choice1.Tag;
-            ProcessNextDialogue(nextDialogueId);
-            nextbutton.Enabled = true;
+            Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
+            foreach (var btn in Choices)
+                btn.Visible = IsVisible;
         }
 
-        private void choice2_Click(object sender, EventArgs e)
+        private void choice_Click(object sender, EventArgs e)
         {
-            string nextDialogueId = (string)choice2.Tag;
+            Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
+            Button btn = (Button)sender;
+            string nextDialogueId = btn.Tag.ToString();
             ProcessNextDialogue(nextDialogueId);
             nextbutton.Enabled = true;
+            DisplayChoices(false);
         }
 
         private void ProcessNextDialogue(string dialogueId)
@@ -206,17 +202,23 @@ namespace WindowsFormsApp1_2024_12_27
         public string Text { get; set; }
     }
 
-    public class Option
+    public class OptionData
     {
         public string Id { get; set; }
-        public string Text { get; set; }
-        public string NextDialogueId { get; set; }
+        public List<Option> Options { get; set; } = new List<Option>();
     }
+
+    public class Option
+    {
+        public string Text { get; set; }
+        public string NextDialogId { get; set; }
+    }
+
 
     public class SequenceItem
     {
         public string Type { get; set; }
         public string Id { get; set; }
-        public List<string> Options { get; set; }
+        public string Option { get; set; }
     }
 }

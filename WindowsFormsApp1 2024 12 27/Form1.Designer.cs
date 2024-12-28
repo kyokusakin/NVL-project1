@@ -40,6 +40,7 @@ namespace WindowsFormsApp1_2024_12_27
             this.Scene = new System.Windows.Forms.PictureBox();
             this.dialoguePanel = new System.Windows.Forms.Panel();
             this.nextbutton = new System.Windows.Forms.Button();
+            this.choice3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Character)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Scene)).BeginInit();
             this.dialoguePanel.SuspendLayout();
@@ -48,25 +49,28 @@ namespace WindowsFormsApp1_2024_12_27
             // DialogueLabel
             // 
             this.DialogueLabel.AutoSize = true;
-            this.DialogueLabel.Location = new System.Drawing.Point(24, 327);
+            this.DialogueLabel.Location = new System.Drawing.Point(16, 218);
+            this.DialogueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DialogueLabel.Name = "DialogueLabel";
-            this.DialogueLabel.Size = new System.Drawing.Size(50, 18);
+            this.DialogueLabel.Size = new System.Drawing.Size(33, 12);
             this.DialogueLabel.TabIndex = 0;
             this.DialogueLabel.Text = "label1";
             this.DialogueLabel.Visible = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(259, 222);
+            this.textBox1.Location = new System.Drawing.Point(173, 148);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
+            this.textBox1.Size = new System.Drawing.Size(68, 22);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(402, 211);
+            this.button1.Location = new System.Drawing.Point(268, 141);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 47);
+            this.button1.Size = new System.Drawing.Size(95, 31);
             this.button1.TabIndex = 3;
             this.button1.Text = "確認";
             this.button1.UseVisualStyleBackColor = true;
@@ -74,30 +78,35 @@ namespace WindowsFormsApp1_2024_12_27
             // 
             // choice1
             // 
-            this.choice1.Location = new System.Drawing.Point(317, 82);
+            this.choice1.Location = new System.Drawing.Point(211, 20);
+            this.choice1.Margin = new System.Windows.Forms.Padding(2);
             this.choice1.Name = "choice1";
-            this.choice1.Size = new System.Drawing.Size(142, 47);
+            this.choice1.Size = new System.Drawing.Size(95, 31);
             this.choice1.TabIndex = 4;
-            this.choice1.Text = "button2";
+            this.choice1.Text = "c1";
             this.choice1.UseVisualStyleBackColor = true;
             this.choice1.Visible = false;
+            this.choice1.Click += new System.EventHandler(this.choice_Click);
             // 
             // choice2
             // 
-            this.choice2.Location = new System.Drawing.Point(317, 152);
+            this.choice2.Location = new System.Drawing.Point(211, 66);
+            this.choice2.Margin = new System.Windows.Forms.Padding(2);
             this.choice2.Name = "choice2";
-            this.choice2.Size = new System.Drawing.Size(142, 47);
+            this.choice2.Size = new System.Drawing.Size(95, 31);
             this.choice2.TabIndex = 5;
-            this.choice2.Text = "button3";
+            this.choice2.Text = "c2";
             this.choice2.UseVisualStyleBackColor = true;
             this.choice2.Visible = false;
+            this.choice2.Click += new System.EventHandler(this.choice_Click);
             // 
             // Speaker
             // 
             this.Speaker.AutoSize = true;
-            this.Speaker.Location = new System.Drawing.Point(24, 276);
+            this.Speaker.Location = new System.Drawing.Point(16, 184);
+            this.Speaker.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Speaker.Name = "Speaker";
-            this.Speaker.Size = new System.Drawing.Size(50, 18);
+            this.Speaker.Size = new System.Drawing.Size(33, 12);
             this.Speaker.TabIndex = 8;
             this.Speaker.Text = "label2";
             this.Speaker.Visible = false;
@@ -106,18 +115,20 @@ namespace WindowsFormsApp1_2024_12_27
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(271, 181);
+            this.label1.Location = new System.Drawing.Point(181, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 9;
             this.label1.Text = "玩家名稱";
             // 
             // Character
             // 
             this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
-            this.Character.Location = new System.Drawing.Point(633, 143);
+            this.Character.Location = new System.Drawing.Point(422, 95);
+            this.Character.Margin = new System.Windows.Forms.Padding(2);
             this.Character.Name = "Character";
-            this.Character.Size = new System.Drawing.Size(169, 178);
+            this.Character.Size = new System.Drawing.Size(113, 119);
             this.Character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Character.TabIndex = 7;
             this.Character.TabStop = false;
@@ -127,9 +138,10 @@ namespace WindowsFormsApp1_2024_12_27
             // Scene
             // 
             this.Scene.Image = global::WindowsFormsApp1_2024_12_27.Properties.Resources.螢幕擷取畫面_2023_07_28_223624;
-            this.Scene.Location = new System.Drawing.Point(-2, 0);
+            this.Scene.Location = new System.Drawing.Point(-1, 0);
+            this.Scene.Margin = new System.Windows.Forms.Padding(2);
             this.Scene.Name = "Scene";
-            this.Scene.Size = new System.Drawing.Size(804, 463);
+            this.Scene.Size = new System.Drawing.Size(536, 309);
             this.Scene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Scene.TabIndex = 6;
             this.Scene.TabStop = false;
@@ -137,28 +149,43 @@ namespace WindowsFormsApp1_2024_12_27
             // dialoguePanel
             // 
             this.dialoguePanel.Controls.Add(this.nextbutton);
-            this.dialoguePanel.Location = new System.Drawing.Point(-2, 317);
+            this.dialoguePanel.Location = new System.Drawing.Point(-1, 211);
+            this.dialoguePanel.Margin = new System.Windows.Forms.Padding(2);
             this.dialoguePanel.Name = "dialoguePanel";
-            this.dialoguePanel.Size = new System.Drawing.Size(804, 131);
+            this.dialoguePanel.Size = new System.Drawing.Size(536, 87);
             this.dialoguePanel.TabIndex = 10;
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(750, 85);
+            this.nextbutton.Location = new System.Drawing.Point(500, 57);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(2);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(40, 36);
+            this.nextbutton.Size = new System.Drawing.Size(27, 24);
             this.nextbutton.TabIndex = 11;
             this.nextbutton.Text = "▶";
             this.nextbutton.UseVisualStyleBackColor = true;
             this.nextbutton.Visible = false;
             this.nextbutton.Click += new System.EventHandler(this.nextbutton_Click);
             // 
+            // choice3
+            // 
+            this.choice3.Location = new System.Drawing.Point(211, 107);
+            this.choice3.Margin = new System.Windows.Forms.Padding(2);
+            this.choice3.Name = "choice3";
+            this.choice3.Size = new System.Drawing.Size(95, 31);
+            this.choice3.TabIndex = 11;
+            this.choice3.Text = "c3";
+            this.choice3.UseVisualStyleBackColor = true;
+            this.choice3.Visible = false;
+            this.choice3.Click += new System.EventHandler(this.choice_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 300);
+            this.Controls.Add(this.choice3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Speaker);
             this.Controls.Add(this.choice2);
@@ -169,6 +196,7 @@ namespace WindowsFormsApp1_2024_12_27
             this.Controls.Add(this.dialoguePanel);
             this.Controls.Add(this.Character);
             this.Controls.Add(this.Scene);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Character)).EndInit();
@@ -192,6 +220,7 @@ namespace WindowsFormsApp1_2024_12_27
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel dialoguePanel;
         private System.Windows.Forms.Button nextbutton;
+        private System.Windows.Forms.Button choice3;
     }
 }
 
