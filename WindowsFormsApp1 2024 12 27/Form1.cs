@@ -24,22 +24,25 @@ namespace WindowsFormsApp1_2024_12_27
         {
             InitializeComponent();
             InitializeData();
-            this.KeyPreview = true;
-            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
-            //自動放大縮小匹配介面
-            ElementHost host = new ElementHost {
-                Dock = DockStyle.Fill
-            };
-            WindowsFormsHost windowsFormsHost = new WindowsFormsHost {
-                Child = panel_Main
-            };
-
-            Viewbox viewbox = new Viewbox {
-                Child = windowsFormsHost
-            };
-            host.Child = viewbox;
-            this.Controls.Add(host);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.AutoSize = false;
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        }
+        private void ToggleFullScreen()
+        {
+            if (FormBorderStyle == FormBorderStyle.None)
+            {
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
         public void InitializeData()
         {
@@ -52,7 +55,7 @@ namespace WindowsFormsApp1_2024_12_27
             textBox1.Visible = true;
             button1.Visible = true;
             dialoguePanel.Visible = true;
-            isChoosingOption = false;
+            isChoosingOption = true;
             isDialoguePlaying = false;
             DialogueLabel.Visible = false;
             nextbutton.Visible = false;
@@ -75,7 +78,7 @@ namespace WindowsFormsApp1_2024_12_27
         {
             CurrentSequence = null;
             Sequences.Clear();
-            string[] files = Directory.GetFiles(@"./Resources");
+            string[] files = Directory.GetFiles(@"./Resources/sequence");
 
             foreach (string file in files)
             {
@@ -95,13 +98,11 @@ namespace WindowsFormsApp1_2024_12_27
 
         private async void ShowDialogue(string dialogueId)
         {
-            if (isDialoguePlaying) return;
+
+            if (isChoosingOption || isDialoguePlaying)
+                return;
             isDialoguePlaying = true;
 
-            if (isChoosingOption)
-            {
-                return;
-            }
             // 禁用 nextbutton
             nextbutton.Enabled = false;
 
@@ -112,7 +113,16 @@ namespace WindowsFormsApp1_2024_12_27
                 var character = dialogue.Character;
                 var dialogueText = dialogue.Text;
 
-                Speaker.Text = (character=="主角")? MainCharactor : character; // 顯示角色名稱
+                if (character == "主角")
+                {
+                    Speaker.Text = MainCharactor;
+                    Character.Visible = true;
+                }
+                else
+                {
+                    Speaker.Text = character;
+                    Character.Visible = false;
+                }
                 DialogueLabel.Text = "";
                 
                 foreach (char c in dialogueText)
@@ -168,17 +178,17 @@ namespace WindowsFormsApp1_2024_12_27
             DialogueLabel.Visible = true;
             nextbutton.Visible = true;
             nextbutton.Enabled = true;
+            isChoosingOption = false;
             ProcessNextSequenceItem();
         }
 
         private void ProcessNextSequenceItem()
         {
-            if (CurrentSequence.Count == 0)
+            if (isChoosingOption || CurrentSequence.Count == 0)
             {
-                //MessageBox.Show("對話結束", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (isChoosingOption)
+            if (isDialoguePlaying)
             {
                 return;
             }
@@ -208,8 +218,17 @@ namespace WindowsFormsApp1_2024_12_27
             isChoosingOption = false;
             nextbutton.Enabled = true;
             DisplayChoices(false);
-            if(!string.IsNullOrEmpty(option.sequenceId))
-                CurrentSequence = Sequences[option.sequenceId];
+            if (!string.IsNullOrEmpty(option.sequenceId))
+            {
+                if (option.sequenceId == option.sequenceId)
+                {
+                    CurrentSequence = new Queue<SequenceItem>(Sequences[option.sequenceId]);
+                }
+                else
+                {
+                    CurrentSequence = Sequences[option.sequenceId];
+                }
+            }
             ProcessNextSequenceItem();
         }
 
@@ -217,12 +236,17 @@ namespace WindowsFormsApp1_2024_12_27
         {
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (keyData == Keys.F4)
+            {
+                ToggleFullScreen();
+            }
+            else if (keyData == Keys.Enter)
             {
                 ProcessNextSequenceItem();
             }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void DialogueLabel_Click(object sender, EventArgs e) => ProcessNextSequenceItem();
@@ -236,6 +260,11 @@ namespace WindowsFormsApp1_2024_12_27
         private void button_Reset_Click(object sender, EventArgs e)
         {
             InitializeData();
+        }
+
+        private void panel_Main_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
         }
     }
 

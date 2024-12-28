@@ -20,7 +20,6 @@
         "sequenceId": "leave2_sequence"
       },
       {
-        "nextDialogId": "20",
         "text": "撿起硬幣",
         "sequenceId": "pickup2_sequence"
       }
@@ -43,10 +42,12 @@
     "id": "4",
     "options": [
       {
-        "text": "進入別墅探索"
+        "text": "進入別墅探索",
+        "sequenceId": "villa1_sequence"
       },
       {
-        "text": "嘗試從森林離開"
+        "text": "嘗試從森林離開",
+        "sequenceId": "forest1_sequence"
       }
     ]
   },
@@ -54,10 +55,12 @@
     "id": "5",
     "options": [
       {
-        "text": "返回別墅附近"
+        "text": "返回別墅附近",
+        "sequenceId": "villa2_sequence"
       },
       {
-        "text": "繼續往森林深處走"
+        "text": "繼續往森林深處走",
+        "sequenceId": "forest2_sequence"
       }
     ]
   },
@@ -65,10 +68,12 @@
     "id": "6",
     "options": [
       {
-        "text": "進入別墅探索"
+        "text": "進入別墅探索",
+        "sequenceId": "villa3_sequence"
       },
       {
-        "text": "繼續嘗試從森林離開"
+        "text": "繼續嘗試從森林離開",
+        "sequenceId": "forest1_sequence"
       }
     ]
   },
@@ -76,10 +81,13 @@
     "id": "7",
     "options": [
       {
-        "text": "大喊並向他求助"
+        "text": "大喊並向他求助...",
+        "sequenceId": "NPC1_1_sequence"
+
       },
       {
-        "text": "慢慢靠近確認"
+        "text": "慢慢靠近確認",
+        "sequenceId": "NPC1_2_sequence"
       }
     ]
   }
