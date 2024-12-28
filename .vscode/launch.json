@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "vslsRemoteLaunch",
+            "name": "WindowsFormsApp1 2024 12 27",
+            "request": "attach",
+            "projectID": "d213f3d6-d9b7-4ddc-a96c-ad0a22a37eb7"
+        }
+    ]
+}

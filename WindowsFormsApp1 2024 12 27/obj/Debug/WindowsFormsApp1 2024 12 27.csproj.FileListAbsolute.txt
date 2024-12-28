@@ -1,0 +1,15 @@
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1 2024 12 27.csproj.AssemblyReference.cache
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1_2024_12_27.Form1.resources
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1 2024 12 27.csproj.GenerateResource.cache
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\Resources\dialogues.json
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\Resources\options.json
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\Resources\sequence.json
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\WindowsFormsApp1 2024 12 27.exe.config
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\WindowsFormsApp1 2024 12 27.exe
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\WindowsFormsApp1 2024 12 27.pdb
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\bin\Debug\Newtonsoft.Json.dll
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1_2024_12_27.Properties.Resources.resources
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1 2024 12 27.csproj.CoreCompileInputs.cache
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsF.E4C91B5F.Up2Date
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1 2024 12 27.exe
+D:\Desktop\WindowsFormsApp1 2024 12 27\WindowsFormsApp1 2024 12 27\obj\Debug\WindowsFormsApp1 2024 12 27.pdb

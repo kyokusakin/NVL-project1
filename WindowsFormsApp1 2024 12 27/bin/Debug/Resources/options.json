@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "text": "接受任務",
+    "nextDialogueId": "2"
+  },
+  {
+    "id": "2",
+    "text": "拒絕任務",
+    "nextDialogueId": "3"
+  }
+]

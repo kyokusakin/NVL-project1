@@ -1,0 +1,14 @@
+[
+  {
+    "type": "dialogue",
+    "id": "1"
+  },
+  {
+    "type": "dialogue",
+    "id": "4"
+  },
+  {
+    "type": "option",
+    "options": ["1", "2"]
+  }
+]

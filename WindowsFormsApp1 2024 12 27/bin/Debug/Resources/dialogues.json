@@ -1,0 +1,6 @@
+{
+  "1": {"character": "Protagonist","text": "你好，冒險者！歡迎來到我們的小鎮。"},
+  "2": {"character": "Villager","text": "村子最近總是被野獸襲擊，我們真的需要幫助！"},
+  "3": { "character": "Protagonist", "text": "真遺憾，或許下次再見吧。" },
+  "4": { "character": "Villager", "text": "村子最近總是被野獸襲擊，我們真的需要幫助！" }
+}
