@@ -1,35 +1,9 @@
 [
   {
-    "id": "2",
+    "id": "1",
     "options": [
       {
-        "nextDialogId": "3",
-        "text": "離開"
-      },
-      {
-        "nextDialogId": "4",
-        "text": "撿起硬幣"
-      }
-    ]
-  },
-  {
-    "id": "5",
-    "options": [
-      {
-        "nextDialogId": "6",
-        "text": "離開"
-      },
-      {
-        "nextDialogId": "7",
-        "text": "撿起硬幣"
-      }
-    ]
-  },
-  {
-    "id": "8",
-    "options": [
-      {
-        "nextDialogId": "9",
+        "nextDialogId": "5",
         "text": "離開"
       },
       {
@@ -39,53 +13,79 @@
     ]
   },
   {
-    "id": "11",
+    "id": "2",
     "options": [
       {
-        "nextDialogId": "12",
+        "nextDialogId": "11",
+        "text": "離開"
+      },
+      {
+        "nextDialogId": "20",
+        "text": "撿起硬幣"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "options": [
+      {
+        "nextDialogId": "21",
+        "text": "離開"
+      },
+      {
+        "nextDialogId": "35",
+        "text": "撿起硬幣"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "options": [
+      {
+        "nextDialogId": "42",
         "text": "進入別墅探索"
       },
       {
-        "nextDialogId": "13",
+        "nextDialogId": "45",
         "text": "嘗試從森林離開"
       }
     ]
   },
   {
-    "id": "14",
+    "id": "5",
     "options": [
       {
-        "nextDialogId": "15",
+        "nextDialogId": "50",
         "text": "返回別墅附近"
       },
       {
-        "nextDialogId": "16",
+        "nextDialogId": "52",
         "text": "繼續往森林深處走"
       }
     ]
   },
   {
-    "id": "15",
+    "id": "6",
     "options": [
       {
-        "nextDialogId": "12",
+        "nextDialogId": "42",
         "text": "進入別墅探索"
       },
       {
-        "nextDialogId": "13",
+        "nextDialogId": "45",
         "text": "繼續嘗試從森林離開"
       }
     ]
   },
   {
-    "id": "17",
+    "id": "7",
     "options": [
       {
-        "nextDialogId": "18",
+        "nextDialogId": "58",
         "text": "大喊並向他求助"
       },
       {
-        "nextDialogId": "19",
+        "nextDialogId": "78",
         "text": "慢慢靠近確認"
       }
     ]
