@@ -35,7 +35,7 @@
       {
         "text": "撿起硬幣",
         "sequenceId": "pickup3_sequence",
-        "BackgroundImg":  "Background2"
+        "BackgroundImg":  "Villa"
       }
     ]
   },
@@ -48,7 +48,8 @@
       },
       {
         "text": "嘗試從森林離開",
-        "sequenceId": "forest1_sequence"
+        "sequenceId": "forest1_sequence",
+        "BackgroundImg": "Background2"
       }
     ]
   },

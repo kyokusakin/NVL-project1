@@ -121,10 +121,13 @@
   <data name="喵豚" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\喵豚.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_1625" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Character" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_1625.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="下載 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="NPC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下載 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NPC2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下載 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -132,5 +135,8 @@
   </data>
   <data name="Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\森林.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Villa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\別墅.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

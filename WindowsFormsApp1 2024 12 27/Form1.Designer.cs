@@ -2,10 +2,11 @@
     {
         partial class Form1
         {
-            /// <summary>
-            /// 設計工具所需的變數。
-            /// </summary>
-            private System.ComponentModel.IContainer components = null;
+        /// <summary>
+        /// 設計工具所需的變數。
+        /// </summary>
+        public static System.Drawing.Color Transparent { get; }
+        private System.ComponentModel.IContainer components = null;
 
             /// <summary>
             /// 清除任何使用中的資源。
@@ -63,9 +64,9 @@
             this.panel_Main.Controls.Add(this.dialoguePanel);
             this.panel_Main.Controls.Add(this.Character);
             this.panel_Main.Controls.Add(this.Scene);
-            this.panel_Main.Location = new System.Drawing.Point(1, 2);
+            this.panel_Main.Location = new System.Drawing.Point(-1, 2);
             this.panel_Main.Name = "panel_Main";
-            this.panel_Main.Size = new System.Drawing.Size(821, 527);
+            this.panel_Main.Size = new System.Drawing.Size(822, 532);
             this.panel_Main.TabIndex = 0;
             // 
             // button_Reset
@@ -153,7 +154,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "確認";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.GameStart);
             // 
             // textBox1
             // 
@@ -179,16 +180,16 @@
             // dialoguePanel
             // 
             this.dialoguePanel.Controls.Add(this.nextbutton);
-            this.dialoguePanel.Location = new System.Drawing.Point(1, 440);
+            this.dialoguePanel.Location = new System.Drawing.Point(1, 368);
             this.dialoguePanel.Margin = new System.Windows.Forms.Padding(2);
             this.dialoguePanel.Name = "dialoguePanel";
-            this.dialoguePanel.Size = new System.Drawing.Size(818, 87);
+            this.dialoguePanel.Size = new System.Drawing.Size(818, 159);
             this.dialoguePanel.TabIndex = 21;
             this.dialoguePanel.Click += new System.EventHandler(this.DialogueLabel_Click);
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(789, 61);
+            this.nextbutton.Location = new System.Drawing.Point(789, 127);
             this.nextbutton.Margin = new System.Windows.Forms.Padding(2);
             this.nextbutton.Name = "nextbutton";
             this.nextbutton.Size = new System.Drawing.Size(27, 24);
@@ -200,8 +201,9 @@
             // 
             // Character
             // 
+            this.Character.BackColor = System.Drawing.Color.Transparent;
             this.Character.Image = ((System.Drawing.Image)(resources.GetObject("Character.Image")));
-            this.Character.Location = new System.Drawing.Point(708, 245);
+            this.Character.Location = new System.Drawing.Point(704, 249);
             this.Character.Margin = new System.Windows.Forms.Padding(2);
             this.Character.Name = "Character";
             this.Character.Size = new System.Drawing.Size(113, 119);
@@ -213,10 +215,10 @@
             // 
             // Scene
             // 
-            this.Scene.Location = new System.Drawing.Point(1, 2);
+            this.Scene.Location = new System.Drawing.Point(0, 0);
             this.Scene.Margin = new System.Windows.Forms.Padding(2);
             this.Scene.Name = "Scene";
-            this.Scene.Size = new System.Drawing.Size(816, 362);
+            this.Scene.Size = new System.Drawing.Size(822, 368);
             this.Scene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Scene.TabIndex = 17;
             this.Scene.TabStop = false;

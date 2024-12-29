@@ -83,9 +83,9 @@ namespace WindowsFormsApp1_2024_12_27.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_1625 {
+        internal static System.Drawing.Bitmap Character {
             get {
-                object obj = ResourceManager.GetObject("IMG_1625", resourceCulture);
+                object obj = ResourceManager.GetObject("Character", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,10 +93,30 @@ namespace WindowsFormsApp1_2024_12_27.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap 下載__1_ {
+        internal static System.Drawing.Bitmap NPC1 {
             get {
-                object obj = ResourceManager.GetObject("下載 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("NPC1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap NPC2 {
+            get {
+                object obj = ResourceManager.GetObject("NPC2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Byte[] 的當地語系化資源。
+        /// </summary>
+        internal static byte[] Villa {
+            get {
+                object obj = ResourceManager.GetObject("Villa", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

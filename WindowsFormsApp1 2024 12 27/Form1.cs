@@ -17,6 +17,7 @@ namespace WindowsFormsApp1_2024_12_27
         public const int MaxOptionCount = 3;
         private Dictionary<string, Dialogue> dialogues;
         private Dictionary<string, OptionData> options;
+        private Dictionary<string, string> characterImages;
         public Queue<SequenceItem> CurrentSequence { get; set; } = new Queue<SequenceItem>();
         public string MainCharactor = "";
         public Form1()
@@ -24,17 +25,23 @@ namespace WindowsFormsApp1_2024_12_27
             InitializeComponent();
             InitializeData();
             DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.Scene.SendToBack();
+            this.Character.BackColor = Color.Transparent;
+            this.Character.Parent = this.Scene;
+            this.Character.BringToFront();
         }
 
-        public async void InitializeData()
+        public void InitializeData()
         {
             LoadDialogues();
             LoadOptions();
             LoadSequence();
+            LoadCharacterImages();
             DisplayChoices(false);
-            ChangeBackgroundImage("Background1");
+            ChangeImage("Background1", Scene);
             Speaker.Visible = false;
             label1.Visible = true;
             textBox1.Visible = true;
@@ -44,6 +51,7 @@ namespace WindowsFormsApp1_2024_12_27
             isDialoguePlaying = false;
             DialogueLabel.Visible = false;
             nextbutton.Visible = false;
+            Character.Visible = false;
         }
         private void LoadDialogues()
         {
@@ -81,6 +89,42 @@ namespace WindowsFormsApp1_2024_12_27
             CurrentSequence = Sequences["start_sequence"];
         }
 
+        private void LoadCharacterImages()
+        {
+            try
+            {
+                string json = File.ReadAllText(@"Resources/Character.json");
+                characterImages = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"無法載入角色圖片資訊：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void GameStart(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("請輸入玩家名稱！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MainCharactor = textBox1.Text;
+            Speaker.Visible = true;
+            label1.Visible = false;
+            textBox1.Visible = false;
+            button1.Visible = false;
+            dialoguePanel.Visible = true;
+
+            DialogueLabel.Visible = true;
+            nextbutton.Visible = true;
+            nextbutton.Enabled = true;
+            isChoosingOption = false;
+            Character.Visible = true;
+            ProcessNextSequenceItem();
+        }
+
         private async void ShowDialogue(string dialogueId)
         {
 
@@ -101,12 +145,30 @@ namespace WindowsFormsApp1_2024_12_27
                 if (character == "主角")
                 {
                     Speaker.Text = MainCharactor;
-                    Character.Visible = true;
+                    string imageName = GetCharacterImage(character);
+                    if (!string.IsNullOrEmpty(imageName))
+                    {
+                        ChangeImage(imageName, Character);
+                        Character.Visible = true;
+                    }
+                    else
+                    {
+                        Character.Visible = false;
+                    }
                 }
                 else
                 {
                     Speaker.Text = character;
-                    Character.Visible = false;
+                    string imageName = GetCharacterImage(character);
+                    if (!string.IsNullOrEmpty(imageName))
+                    {
+                        ChangeImage(imageName, Character);
+                        Character.Visible = true;
+                    }
+                    else
+                    {
+                        Character.Visible = false;
+                    }
                 }
                 DialogueLabel.Text = "";
 
@@ -126,6 +188,16 @@ namespace WindowsFormsApp1_2024_12_27
             nextbutton.Enabled = true;
         }
 
+        private string GetCharacterImage(string characterName)
+        {
+            if (characterImages.TryGetValue(characterName, out string imageName))
+            {
+                return imageName;
+            }
+            return null;
+        }
+
+
         private void ShowOptions(string optionId)
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
@@ -143,28 +215,6 @@ namespace WindowsFormsApp1_2024_12_27
                 btn_choice.Enabled = true;
                 nextbutton.Enabled = false;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
-            {
-                MessageBox.Show("請輸入玩家名稱！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            MainCharactor = textBox1.Text;
-            Speaker.Visible = true;
-            label1.Visible = false;
-            textBox1.Visible = false;
-            button1.Visible = false;
-            dialoguePanel.Visible = true;
-
-            DialogueLabel.Visible = true;
-            nextbutton.Visible = true;
-            nextbutton.Enabled = true;
-            isChoosingOption = false;
-            ProcessNextSequenceItem();
         }
 
         private void ProcessNextSequenceItem()
@@ -195,7 +245,7 @@ namespace WindowsFormsApp1_2024_12_27
                 btn.Visible = IsVisible;
         }
 
-        private async void choice_Click(object sender, EventArgs e)
+        private void choice_Click(object sender, EventArgs e)
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             Button btn = (Button)sender;
@@ -217,36 +267,33 @@ namespace WindowsFormsApp1_2024_12_27
 
             if (!string.IsNullOrEmpty(option.BackgroundImg))
             {
-                ChangeBackgroundImage(option.BackgroundImg);
+                ChangeImage(option.BackgroundImg, Scene);
             }
             ProcessNextSequenceItem();
         }
 
         private void Speaker_Click(object sender, EventArgs e) { }
 
-        private void ChangeBackgroundImage(string resourceName)
+        private void ChangeImage(string resourceName, PictureBox targetPictureBox)
         {
             if (!string.IsNullOrEmpty(resourceName))
             {
                 try
                 {
-                    // 使用資源管理器獲取資源
                     object resource = WindowsFormsApp1_2024_12_27.Properties.Resources.ResourceManager.GetObject(resourceName);
 
                     if (resource is Bitmap bitmap)
                     {
-                        // 如果資源是 Bitmap，直接設置為背景圖片
-                        Scene.Image = bitmap;
-                        Scene.SizeMode = PictureBoxSizeMode.StretchImage;
+                        targetPictureBox.Image = bitmap;
+                        targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     else if (resource is byte[] imageData)
                     {
-                        // 如果資源是 byte[]，則將其轉換為 Bitmap
                         using (MemoryStream ms = new MemoryStream(imageData))
                         {
-                            Scene.Image = Image.FromStream(ms);
+                            targetPictureBox.Image = Image.FromStream(ms);
                         }
-                        Scene.SizeMode = PictureBoxSizeMode.StretchImage;
+                        targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     else
                     {
@@ -255,8 +302,7 @@ namespace WindowsFormsApp1_2024_12_27
                 }
                 catch (Exception ex)
                 {
-                    // 處理加載圖像時的異常
-                    MessageBox.Show($"無法從資源中加載背景圖像：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"無法從資源中加載圖像：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
