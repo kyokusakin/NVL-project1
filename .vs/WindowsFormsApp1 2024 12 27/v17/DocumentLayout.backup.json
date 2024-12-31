@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1 - \u8907\u88FD\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|D:\\Desktop\\NVL-project1 - \u8907\u88FD\\windowsformsapp1 2024 12 27\\resources\\dialogues.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\dialogues.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1 - \u8907\u88FD\\windowsformsapp1 2024 12 27\\resources\\options.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\resources\\options.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|d:\\desktop\\nvl-project1 - \u8907\u88FD\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|solutionrelative:windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D213F3D6-D9B7-4DDC-A96C-AD0A22A37EB7}|WindowsFormsApp1 2024 12 27\\WindowsFormsApp1 2024 12 27.csproj|D:\\Desktop\\NVL-project1 - \u8907\u88FD\\windowsformsapp1 2024 12 27\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -56,17 +56,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs*",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs*",
-              "ViewState": "AgIAAFUBAAAAAAAAAAAAAGsBAAAbAAAAAAAAAA==",
+              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-31T05:14:32.258Z",
               "IsPinned": true,
@@ -78,8 +78,8 @@
               "Title": "Form1.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.cs",
-              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]*",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]*",
+              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-31T05:14:29.318Z",
               "IsPinned": true,
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Character.json",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Resources\\Character.json",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\Character.json",
@@ -104,8 +104,8 @@
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Form1.Designer.cs",
-              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.Designer.cs*",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.Designer.cs*",
+              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Form1.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Form1.Designer.cs",
               "ViewState": "AgIAAGoAAAAAAAAAAAAmwHoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-31T05:19:23.487Z",
@@ -126,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "options.json",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Resources\\options.json",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\options.json",
@@ -139,16 +139,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "dialogues.json",
               "DocumentMoniker": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
               "RelativeDocumentMoniker": "WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
-              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json*",
-              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json*",
-              "ViewState": "AgIAACABAAAAAAAAAAAAADsBAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\Desktop\\NVL-project1 - \u8907\u88FD\\WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
+              "RelativeToolTip": "WindowsFormsApp1 2024 12 27\\Resources\\dialogues.json",
+              "ViewState": "AgIAACABAAAAAAAAAAAAACkBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-31T05:27:28.651Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
@@ -174,10 +178,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-12-31T10:02:02.531Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
