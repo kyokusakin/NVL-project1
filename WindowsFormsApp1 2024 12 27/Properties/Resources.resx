@@ -122,7 +122,19 @@
     <value>..\Resources\喵豚.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Character" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_1625.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\IMG_2333.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2336.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2335.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2334.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2332.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NPC1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下載 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -131,12 +143,24 @@
     <value>..\Resources\下載 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\螢幕擷取畫面 2023-07-28 223624.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\IMG_2330.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="黑影" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2328.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="黑霧" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2338.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2337.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\森林.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\IMG_2329.JPG;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Villa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_2331.JPG;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Villa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\別墅.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

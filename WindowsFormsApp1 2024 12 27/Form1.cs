@@ -24,14 +24,28 @@ namespace WindowsFormsApp1_2024_12_27
         {
             InitializeComponent();
             InitializeData();
-            DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
+            InitializeForm();
+        }
+
+        public void InitializeForm() //初始化視窗
+        {
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            DialogueLabel.Click += new EventHandler(DialogueLabel_Click);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Scene.SendToBack();
-            this.Character.BackColor = Color.Transparent;
+            this.DialogueLabel.Parent = this.dialoguePanel;
+            this.Speaker.Parent = this.dialoguePanel;
+            this.nextbutton.Parent = this.dialoguePanel;
             this.Character.Parent = this.Scene;
-            this.Character.BringToFront();
+            this.button_Reset.Parent = this.Scene;
+            this.button1.Parent = this.Scene;
+            SetLabelLoction(DialogueLabel, dialoguePanel);
+            SetLabelLoction(Speaker, dialoguePanel);
+            Button[] choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
+            foreach (var choice in choices)
+            {
+                choice.Parent = this.Scene;
+            }
         }
 
         public void InitializeData()
@@ -53,13 +67,20 @@ namespace WindowsFormsApp1_2024_12_27
             nextbutton.Visible = false;
             Character.Visible = false;
         }
-        private void LoadDialogues()
+
+        private void SetLabelLoction(Control control, Control panel)
+        {
+            Point oldPoint = control.Location;
+            control.Location = new Point(oldPoint.X - panel.Location.X, oldPoint.Y - panel.Location.Y);
+        }
+        
+        private void LoadDialogues() //載入對話
         {
             string json = File.ReadAllText(@"Resources/dialogues.json");
             dialogues = JsonConvert.DeserializeObject<Dictionary<string, Dialogue>>(json);
         }
 
-        private void LoadOptions()
+        private void LoadOptions() //載入選項
         {
             string json = File.ReadAllText(@"Resources/options.json");
             var optionsList = JsonConvert.DeserializeObject<List<OptionData>>(json);
@@ -67,7 +88,7 @@ namespace WindowsFormsApp1_2024_12_27
             options = optionsList.ToDictionary(options => options.Id);
         }
 
-        private void LoadSequence()
+        private void LoadSequence() //載入對話序列
         {
             CurrentSequence = null;
             Sequences.Clear();
@@ -89,7 +110,7 @@ namespace WindowsFormsApp1_2024_12_27
             CurrentSequence = Sequences["start_sequence"];
         }
 
-        private void LoadCharacterImages()
+        private void LoadCharacterImages() //載入角色圖片
         {
             try
             {
@@ -102,7 +123,17 @@ namespace WindowsFormsApp1_2024_12_27
             }
         }
 
-        private void GameStart(object sender, EventArgs e)
+        private string GetCharacterImage(string characterName) //取得角色圖片
+        {
+            if (characterImages.TryGetValue(characterName, out string imageName))
+            {
+                return imageName;
+            }
+            return null;
+        }
+
+
+        private void GameStart(object sender, EventArgs e) //遊戲開始按鈕
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
@@ -125,22 +156,21 @@ namespace WindowsFormsApp1_2024_12_27
             ProcessNextSequenceItem();
         }
 
-        private async void ShowDialogue(string dialogueId)
+        private async void ShowDialogue(string dialogueId) //顯示對話
         {
 
             if (isChoosingOption || isDialoguePlaying)
                 return;
             isDialoguePlaying = true;
-
-            // 禁用 nextbutton
             nextbutton.Enabled = false;
 
-            // 檢查對話 ID 是否存在於字典中
             if (dialogues.ContainsKey(dialogueId))
             {
-                var dialogue = dialogues[dialogueId]; // 直接通過 dialogueId 獲取對話
-                var character = dialogue.Character;
+                var dialogue = dialogues[dialogueId];
                 var dialogueText = dialogue.Text;
+                var character = dialogue.Character;
+                var expression = dialogue.expression;
+                var backgroundImg = dialogue.BackgroundImg;
 
                 if (character == "主角")
                 {
@@ -150,10 +180,6 @@ namespace WindowsFormsApp1_2024_12_27
                     {
                         ChangeImage(imageName, Character);
                         Character.Visible = true;
-                    }
-                    else
-                    {
-                        Character.Visible = false;
                     }
                 }
                 else
@@ -170,12 +196,25 @@ namespace WindowsFormsApp1_2024_12_27
                         Character.Visible = false;
                     }
                 }
+
+                if (!string.IsNullOrEmpty(expression))
+                {
+                    ChangeImage(expression, Character);
+                    Character.Visible = true;
+                }
+
+                if (!string.IsNullOrEmpty(backgroundImg))
+                {
+                    ChangeImage(backgroundImg, Scene);
+                    Character.Visible = true;
+                }
+
                 DialogueLabel.Text = "";
 
-                foreach (char c in dialogueText)
+                foreach (char c in dialogueText) //逐字顯示
                 {
                     DialogueLabel.Text += c;
-                    await Task.Delay(50); // 顯示每個字的間隔
+                    await Task.Delay(50);
                 }
             }
             else
@@ -184,27 +223,14 @@ namespace WindowsFormsApp1_2024_12_27
             }
 
             isDialoguePlaying = false;
-            // 啟用 nextbutton
             nextbutton.Enabled = true;
         }
 
-        private string GetCharacterImage(string characterName)
-        {
-            if (characterImages.TryGetValue(characterName, out string imageName))
-            {
-                return imageName;
-            }
-            return null;
-        }
-
-
-        private void ShowOptions(string optionId)
+        private void ShowOptions(string optionId) //顯示選項
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             DisplayChoices(false);
-            //讀取選項清單
             var optionData = options[optionId];
-            //設定選項資料
             for (int i = 0; i < optionData.Options.Count && i < MaxOptionCount; i++)
             {
                 Option option = optionData.Options[i];
@@ -217,7 +243,7 @@ namespace WindowsFormsApp1_2024_12_27
             }
         }
 
-        private void ProcessNextSequenceItem()
+        private void ProcessNextSequenceItem() //處理下一個對話或選項
         {
             if (isChoosingOption || CurrentSequence.Count == 0)
             {
@@ -238,14 +264,15 @@ namespace WindowsFormsApp1_2024_12_27
                 isChoosingOption = true;
             }
         }
-        public void DisplayChoices(bool IsVisible)
+
+        public void DisplayChoices(bool IsVisible) //顯示選項
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             foreach (var btn in Choices)
                 btn.Visible = IsVisible;
         }
 
-        private void choice_Click(object sender, EventArgs e)
+        private void choice_Click(object sender, EventArgs e) //選項按鈕事件
         {
             Button[] Choices = new Button[MaxOptionCount] { choice1, choice2, choice3 };
             Button btn = (Button)sender;
@@ -254,62 +281,61 @@ namespace WindowsFormsApp1_2024_12_27
             nextbutton.Enabled = true;
             DisplayChoices(false);
             if (!string.IsNullOrEmpty(option.sequenceId))
-            {
-                if (option.sequenceId == option.sequenceId)
-                {
-                    CurrentSequence = new Queue<SequenceItem>(Sequences[option.sequenceId]);
-                }
-                else
-                {
-                    CurrentSequence = Sequences[option.sequenceId];
-                }
-            }
+                CurrentSequence = new Queue<SequenceItem>(Sequences[option.sequenceId]);
 
             if (!string.IsNullOrEmpty(option.BackgroundImg))
-            {
                 ChangeImage(option.BackgroundImg, Scene);
-            }
+
             ProcessNextSequenceItem();
         }
 
-        private void Speaker_Click(object sender, EventArgs e) { }
-
-        private void ChangeImage(string resourceName, PictureBox targetPictureBox)
+        private void ChangeImage(string resourceName, PictureBox targetPictureBox) //更換圖片
         {
-            if (!string.IsNullOrEmpty(resourceName))
+            if (string.IsNullOrEmpty(resourceName))
             {
-                try
+                return;
+            }
+            try
+            {
+                if (targetPictureBox.Image != null) //釋放資源
                 {
-                    object resource = WindowsFormsApp1_2024_12_27.Properties.Resources.ResourceManager.GetObject(resourceName);
+                    targetPictureBox.Image.Dispose();
+                    targetPictureBox.Image = null;
+                }
 
-                    if (resource is Bitmap bitmap)
-                    {
-                        targetPictureBox.Image = bitmap;
-                        targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                    else if (resource is byte[] imageData)
-                    {
-                        using (MemoryStream ms = new MemoryStream(imageData))
-                        {
-                            targetPictureBox.Image = Image.FromStream(ms);
-                        }
-                        targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException($"資源 {resourceName} 不是有效的 Bitmap 或 byte[] 資源。");
-                    }
-                }
-                catch (Exception ex)
+                object resource = WindowsFormsApp1_2024_12_27.Properties.Resources.ResourceManager.GetObject(resourceName);
+
+                if (resource == null)
                 {
-                    MessageBox.Show($"無法從資源中加載圖像：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidOperationException($"資源 {resourceName} 不存在。");
                 }
+
+                if (resource is Bitmap bitmap)
+                {
+                    targetPictureBox.Image = (Bitmap)bitmap.Clone();
+                    targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else if (resource is byte[] imageData)
+                {
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        targetPictureBox.Image = (Bitmap)Image.FromStream(ms).Clone();
+                    }
+                    targetPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    throw new InvalidOperationException($"資源 {resourceName} 不是有效的 Bitmap 或 byte[] 資源。");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"無法從資源中載入圖像：{ex.Message}", "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 
-
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) //按下 Enter 鍵繼續對話
         {
             if (keyData == Keys.Enter)
             {
@@ -322,30 +348,15 @@ namespace WindowsFormsApp1_2024_12_27
 
         private void nextbutton_Click(object sender, EventArgs e) => ProcessNextSequenceItem();
 
-        private void Character_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button_Reset_Click(object sender, EventArgs e)
-        {
-            InitializeData();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void button_Reset_Click(object sender, EventArgs e) => InitializeData();
     }
 
     public class Dialogue
     {
         public string Character { get; set; }
         public string Text { get; set; }
+        public string expression { get; set; }
+        public string BackgroundImg { get; set; }
     }
 
     public class OptionData

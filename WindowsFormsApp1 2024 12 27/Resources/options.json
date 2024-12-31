@@ -17,7 +17,8 @@
     "options": [
       {
         "text": "離開",
-        "sequenceId": "leave2_sequence"
+        "sequenceId": "leave2_sequence",
+        "BackgroundImg": "黑霧"
       },
       {
         "text": "撿起硬幣",
@@ -30,7 +31,8 @@
     "options": [
       {
         "text": "離開",
-        "sequenceId": "leave3_sequence"
+        "sequenceId": "leave3_sequence",
+        "BackgroundImg": "黑霧"
       },
       {
         "text": "撿起硬幣",
@@ -62,7 +64,8 @@
       },
       {
         "text": "繼續往森林深處走",
-        "sequenceId": "forest2_sequence"
+        "sequenceId": "forest2_sequence",
+        "BackgroundImg": "黑影"
       }
     ]
   },

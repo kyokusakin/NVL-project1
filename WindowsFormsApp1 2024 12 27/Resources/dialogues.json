@@ -309,6 +309,8 @@
   },
   "78": {
     "character": "旁白",
-    "text": "to be continued (⁠・⁠∀⁠・⁠)。"
+    "text": "to be continued (⁠・⁠∀⁠・⁠)。",
+    "BackgroundImg": "黑霧",
+    "expression": "Character1"
   }
 }
